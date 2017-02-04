@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+  
+  <mapper namespace="web.xsq.dao.SsqDao">
+  	<select id="getProvince" resultType="web.xsq.pojo.Province">
+  			select * from province where father = #{fatherId};
+  	</select>
+  	
+  	 <select id="getCity" resultType="web.xsq.pojo.City">
+  			select * from city where father = #{fatherId};
+  	</select>
+  	
+  	 <select id="getArea" resultType="web.xsq.pojo.Area">
+  			select * from area where father = #{fatherId};
+  	</select>
+  </mapper>
